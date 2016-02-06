@@ -87,7 +87,6 @@ def watch(msg, params=None):
     j = r.json()
     if r.status_code == 404:
         room.message("I'm sorry, I can't watch that build. Here's the reason: {0}".format(j['message']))
-        return
     else:
         thread.start_new_thread(_watch, (room, plan.upper(), build_id,))
 
