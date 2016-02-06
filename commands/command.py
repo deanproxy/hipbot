@@ -25,7 +25,7 @@ commands = (
     ("what's up", salute.respond),
     ('help', help.show),
     ('die', system.exit),
-    ('tell me a joke', jokes.tell),
+    ('tell me a(?:nother)? joke', jokes.tell),
     (r'(?:\w+\s)?build status for (\w+(?:[-\w+])+)', build.status),
     (r'alias build (\w+(?:[-\w+])+) (\w+(?:[-\w+])+)', build.alias),
     (r'start build for (\w+(?:[-\w+])+)', build.start),
